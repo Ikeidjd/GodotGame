@@ -21,8 +21,8 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=960
+window/size/viewport_height=540
 
 [dotnet]
 
@@ -54,7 +54,10 @@ walk_right={
 [layer_names]
 
 2d_physics/layer_1="Wall"
+2d_physics/layer_2="Weapon"
+2d_physics/layer_3="Entity"
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
