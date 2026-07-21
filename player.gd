@@ -1,7 +1,20 @@
-extends Node2D
+extends CharacterBody2D
 
+enum State {
+	Idle,
+	Walk,
+}
 
-var speed: float = 80
+enum Direction {
+	Up,
+	Down,
+	Left,
+	Right,
+}
+
+var speed: float = 80.0
+var state: State = State.Idle
+var direction: Direction = Direction.Down
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,28 +23,48 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float):
-	var vel = Vector2.ZERO
-	
+func _physics_process(delta: float):
+	velocity = Vector2.ZERO
+
 	if Input.is_action_pressed("walk_up"):
-		vel.y -= 1
+		velocity.y -= 1
 	if Input.is_action_pressed("walk_left"):
-		vel.x -= 1
+		velocity.x -= 1
 	if Input.is_action_pressed("walk_down"):
-		vel.y += 1
+		velocity.y += 1
 	if Input.is_action_pressed("walk_right"):
-		vel.x += 1
-	
-	position += vel.normalized() * speed * delta
-	play_animation(vel)
+		velocity.x += 1
+
+	velocity = velocity.normalized() * speed
+	play_animation()
+	move_and_slide()
 
 
-func play_animation(vel: Vector2):
-	if vel.y > 0:
-		$AnimationPlayer.play("walk_down")
-	elif vel.y < 0:
-		$AnimationPlayer.play("walk_up")
-	elif vel.x > 0:
-		$AnimationPlayer.play("walk_right")
-	elif vel.x < 0:
-		$AnimationPlayer.play("walk_left")
+func play_animation():
+	if velocity == Vector2.ZERO:
+		state = State.Idle
+	else:
+		state = State.Walk
+
+	if velocity.y > 0:
+		direction = Direction.Down
+	elif velocity.y < 0:
+		direction = Direction.Up
+	elif velocity.x > 0:
+		direction = Direction.Right
+	elif velocity.x < 0:
+		direction = Direction.Left
+
+	var animation = "_"
+
+	match state:
+		State.Idle: animation = "idle" + animation
+		State.Walk: animation = "walk" + animation
+
+	match direction:
+		Direction.Up: animation += "up"
+		Direction.Down: animation += "down"
+		Direction.Left: animation += "left"
+		Direction.Right: animation += "right"
+
+	$AnimatedSprite2D.play(animation)
