@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cxugh8pisy5gx"]
+[gd_scene format=3 uid="uid://eptl2w5l3dbg"]
 
-[ext_resource type="Texture2D" uid="uid://dtinb8ac3enl3" path="res://items.png" id="1_74bdg"]
+[ext_resource type="Texture2D" uid="uid://dtinb8ac3enl3" path="res://textures/items.png" id="1_ycbs3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oenyp"]
 size = Vector2(10, 4)
@@ -12,7 +12,7 @@ collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1473863834]
 rotation = 0.7853982
-texture = ExtResource("1_74bdg")
+texture = ExtResource("1_ycbs3")
 region_enabled = true
 region_rect = Rect2(32, 0, 16, 16)
 

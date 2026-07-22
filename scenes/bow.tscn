@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://ckd8fbkiwrggi"]
+
+[ext_resource type="Texture2D" uid="uid://dtinb8ac3enl3" path="res://textures/items.png" id="1_vt0lb"]
+[ext_resource type="Script" uid="uid://uuoo1bjboa58" path="res://scenes/bow.gd" id="2_prjx1"]
+[ext_resource type="PackedScene" uid="uid://mqebkrls8p36" path="res://scenes/arrow.tscn" id="3_rivji"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prjx1"]
+atlas = ExtResource("1_vt0lb")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt0lb"]
+atlas = ExtResource("1_vt0lb")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rivji"]
+atlas = ExtResource("1_vt0lb")
+region = Rect2(112, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atxj4"]
+atlas = ExtResource("1_vt0lb")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxltw"]
+atlas = ExtResource("1_vt0lb")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uma3s"]
+atlas = ExtResource("1_vt0lb")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ji0pi"]
+atlas = ExtResource("1_vt0lb")
+region = Rect2(96, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15scw"]
+atlas = ExtResource("1_vt0lb")
+region = Rect2(112, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u8po1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prjx1")
+}],
+"loop": 0,
+"name": &"empty",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt0lb")
+}],
+"loop": 0,
+"name": &"loaded",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rivji")
+}],
+"loop": 0,
+"name": &"pulled",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atxj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxltw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uma3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ji0pi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15scw")
+}],
+"loop": 0,
+"name": &"pulling",
+"speed": 8.0
+}]
+
+[node name="Bow" type="AnimatedSprite2D" unique_id=450282125 node_paths=PackedStringArray("cooldown_timer")]
+rotation = 0.7853982
+sprite_frames = SubResource("SpriteFrames_u8po1")
+animation = &"empty"
+script = ExtResource("2_prjx1")
+arrow = ExtResource("3_rivji")
+cooldown_timer = NodePath("CooldownTimer")
+
+[node name="CooldownTimer" type="Timer" parent="." unique_id=1177552976]
+one_shot = true
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]

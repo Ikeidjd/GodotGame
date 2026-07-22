@@ -1,16 +1,15 @@
 [gd_scene format=3 uid="uid://dmtggey6a6wsv"]
 
-[ext_resource type="Texture2D" uid="uid://bheornocyuopn" path="res://tree.png" id="1_brfkd"]
+[ext_resource type="Texture2D" uid="uid://bheornocyuopn" path="res://textures/tree.png" id="1_avsvi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vk58"]
 size = Vector2(16, 1)
 
-[node name="Tree" type="Node2D" unique_id=1031281582]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1707963819]
-texture = ExtResource("1_brfkd")
+[node name="Tree" type="Sprite2D" unique_id=1707963819]
+texture = ExtResource("1_avsvi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1652753018]
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1727620785]
 position = Vector2(0, 23.5)

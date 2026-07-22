@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvusovugf31gr"
-path="res://.godot/imported/evil_player.png-1920302bfb6da4611743f464a4a7e60d.ctex"
+uid="uid://w74krjyyfre3"
+path="res://.godot/imported/tiles.png-fd1e809407e1b022bee2996923837492.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://evil_player.png"
-dest_files=["res://.godot/imported/evil_player.png-1920302bfb6da4611743f464a4a7e60d.ctex"]
+source_file="res://textures/tiles.png"
+dest_files=["res://.godot/imported/tiles.png-fd1e809407e1b022bee2996923837492.ctex"]
 
 [params]
 

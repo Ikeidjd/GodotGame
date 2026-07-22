@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://8rxcantj4v66"]
+
+[ext_resource type="Script" uid="uid://olto3ci33b8g" path="res://scripts/health_manager.gd" id="1_j68d3"]
+[ext_resource type="AudioStream" uid="uid://bj5yb3tfl83vi" path="res://sounds/explosion.wav" id="2_y1gyo"]
+
+[node name="HealthManager" type="Node" unique_id=1117400189 node_paths=PackedStringArray("entity", "hurt_box", "invincibility_timer", "flicker_timer", "hit_sound")]
+script = ExtResource("1_j68d3")
+entity = NodePath("")
+hurt_box = NodePath("")
+invincibility_timer = NodePath("InvincibilityTimer")
+flicker_timer = NodePath("FlickerTimer")
+hit_sound = NodePath("HitSound")
+initial_health = 3.0
+
+[node name="InvincibilityTimer" type="Timer" parent="." unique_id=638733772]
+one_shot = true
+
+[node name="FlickerTimer" type="Timer" parent="." unique_id=1005131971]
+wait_time = 0.25
+
+[node name="HitSound" type="AudioStreamPlayer" parent="." unique_id=1189722608]
+stream = ExtResource("2_y1gyo")
+
+[connection signal="timeout" from="InvincibilityTimer" to="." method="_on_invincibility_timer_timeout"]
+[connection signal="timeout" from="FlickerTimer" to="." method="_on_flicker_timer_timeout"]
+[connection signal="finished" from="HitSound" to="." method="_on_hit_sound_finished"]

@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://dpdebgiikxvbi"]
 
-[ext_resource type="TileSet" uid="uid://kmupkax03w5s" path="res://tiles.tres" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://player.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://nnsdbjj2wqr6" path="res://evil_player.tscn" id="3_h2yge"]
+[ext_resource type="TileSet" uid="uid://kmupkax03w5s" path="res://tilesets/tiles.tres" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://scenes/player.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://nnsdbjj2wqr6" path="res://scenes/evil_player.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=1468961590]
 

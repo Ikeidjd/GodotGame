@@ -1,89 +1,89 @@
 [gd_scene format=3 uid="uid://dpux7mjnmklvb"]
 
-[ext_resource type="Texture2D" uid="uid://bl0j73mtlt1fq" path="res://player.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://b1nurxbppq6oh" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Script" uid="uid://dt7kcly20qe5k" path="res://weapon_holder.gd" id="3_i3pqv"]
-[ext_resource type="Script" uid="uid://bn4g3r5mpuebn" path="res://animate_character.gd" id="3_sweqy"]
-[ext_resource type="PackedScene" uid="uid://cxugh8pisy5gx" path="res://sword.tscn" id="4_hqtel"]
+[ext_resource type="Script" uid="uid://b1nurxbppq6oh" path="res://scripts/player.gd" id="1_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://bl0j73mtlt1fq" path="res://textures/player.png" id="2_tuyoq"]
+[ext_resource type="Script" uid="uid://bn4g3r5mpuebn" path="res://scripts/animate_character.gd" id="3_tuyoq"]
+[ext_resource type="Script" uid="uid://dt7kcly20qe5k" path="res://scripts/weapon_holder.gd" id="4_fjrip"]
+[ext_resource type="PackedScene" uid="uid://ckd8fbkiwrggi" path="res://scenes/bow.tscn" id="5_qlg0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q13i1"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pbfsw"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(0, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5tmop"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pylmc"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(0, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nvl01"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ivps1"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(32, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_606se"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1c27"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(32, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_op7ga"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(48, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1jxqw"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b26j0"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("2_tuyoq")
 region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7vk58"]
@@ -194,7 +194,7 @@ size = Vector2(7, 1)
 
 [node name="Player" type="CharacterBody2D" unique_id=1474124218 node_paths=PackedStringArray("animator", "weapon_holder")]
 collision_layer = 0
-script = ExtResource("1_onrkg")
+script = ExtResource("1_qlg0r")
 animator = NodePath("CharacterAnimator")
 weapon_holder = NodePath("WeaponHolder")
 speed = 80.0
@@ -202,13 +202,15 @@ speed = 80.0
 [node name="CharacterAnimator" type="AnimatedSprite2D" parent="." unique_id=303113846]
 sprite_frames = SubResource("SpriteFrames_7vk58")
 animation = &"idle_down"
-script = ExtResource("3_sweqy")
+script = ExtResource("3_tuyoq")
 
 [node name="TileCollider" type="CollisionShape2D" parent="." unique_id=974057776]
 position = Vector2(-0.5, 6.5)
 shape = SubResource("RectangleShape2D_sweqy")
 
 [node name="WeaponHolder" type="Node2D" parent="." unique_id=406286088]
-script = ExtResource("3_i3pqv")
-initial = ExtResource("4_hqtel")
+script = ExtResource("4_fjrip")
+initial = ExtResource("5_qlg0r")
 distance = 10.0
+
+[node name="Empty" type="Node" parent="WeaponHolder" unique_id=2017792593]
