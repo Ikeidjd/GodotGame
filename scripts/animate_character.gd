@@ -23,14 +23,17 @@ func play_animation(velocity: Vector2):
 	else:
 		state = State.Walk
 
-	if velocity.y > 0:
-		direction = Direction.Down
-	elif velocity.y < 0:
-		direction = Direction.Up
-	elif velocity.x > 0:
-		direction = Direction.Right
-	elif velocity.x < 0:
-		direction = Direction.Left
+	# This way, no axis has that much inherent priority over the other, since it's the most intense that one takes priority
+	if abs(velocity.y) >= abs(velocity.x):
+		if velocity.y > 0:
+			direction = Direction.Down
+		elif velocity.y < 0:
+			direction = Direction.Up
+	else:
+		if velocity.x > 0:
+			direction = Direction.Right
+		elif velocity.x < 0:
+			direction = Direction.Left
 
 	var animation_name = "_"
 

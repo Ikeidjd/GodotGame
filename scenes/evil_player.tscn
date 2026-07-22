@@ -223,4 +223,6 @@ entity = NodePath("..")
 hurt_box = NodePath("../HurtBox")
 
 [node name="HealthBar" parent="." unique_id=2138710938 node_paths=PackedStringArray("health_manager") instance=ExtResource("5_4iqbs")]
+offset_right = 5.0
+offset_bottom = 11.0
 health_manager = NodePath("../HealthManager")

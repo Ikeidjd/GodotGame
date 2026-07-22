@@ -1,6 +1,7 @@
 class_name WeaponHolder
 extends Node2D
 
+@export var player: Player
 @export var initial: PackedScene
 @export var distance: float
 

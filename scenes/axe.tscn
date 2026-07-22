@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dss0marv15of"]
+
+[ext_resource type="Texture2D" uid="uid://dtinb8ac3enl3" path="res://textures/items.png" id="1_725vr"]
+[ext_resource type="Script" uid="uid://d3lworenlfbai" path="res://scripts/axe.gd" id="2_8s0ly"]
+
+[node name="Axe" type="Sprite2D" unique_id=1102460123 node_paths=PackedStringArray("cooldown_timer")]
+rotation = 0.7853982
+texture = ExtResource("1_725vr")
+region_enabled = true
+region_rect = Rect2(80, 0, 16, 16)
+script = ExtResource("2_8s0ly")
+cooldown_timer = NodePath("CooldownTimer")
+
+[node name="CooldownTimer" type="Timer" parent="." unique_id=456564253]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]

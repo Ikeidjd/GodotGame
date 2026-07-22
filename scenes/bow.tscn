@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ckd8fbkiwrggi"]
 
 [ext_resource type="Texture2D" uid="uid://dtinb8ac3enl3" path="res://textures/items.png" id="1_vt0lb"]
-[ext_resource type="Script" uid="uid://uuoo1bjboa58" path="res://scenes/bow.gd" id="2_prjx1"]
+[ext_resource type="Script" uid="uid://uuoo1bjboa58" path="res://scripts/bow.gd" id="2_prjx1"]
 [ext_resource type="PackedScene" uid="uid://mqebkrls8p36" path="res://scenes/arrow.tscn" id="3_rivji"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prjx1"]

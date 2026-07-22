@@ -3,10 +3,8 @@
 [ext_resource type="Script" uid="uid://olto3ci33b8g" path="res://scripts/health_manager.gd" id="1_j68d3"]
 [ext_resource type="AudioStream" uid="uid://bj5yb3tfl83vi" path="res://sounds/explosion.wav" id="2_y1gyo"]
 
-[node name="HealthManager" type="Node" unique_id=1117400189 node_paths=PackedStringArray("entity", "hurt_box", "invincibility_timer", "flicker_timer", "hit_sound")]
+[node name="HealthManager" type="Node" unique_id=1117400189 node_paths=PackedStringArray("invincibility_timer", "flicker_timer", "hit_sound")]
 script = ExtResource("1_j68d3")
-entity = NodePath("")
-hurt_box = NodePath("")
 invincibility_timer = NodePath("InvincibilityTimer")
 flicker_timer = NodePath("FlickerTimer")
 hit_sound = NodePath("HitSound")
